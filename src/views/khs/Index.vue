@@ -39,13 +39,13 @@
   const krsData = ref([])
   
   const cariKRS = async () => {
-    const res = await axios.get(`https://sistemakademik1.mockapi.io/krs?nim=${nim.value}`)
+    const res = await axios.get(`https://mockapi.io/projects/686842bdd5933161d70b3886#/krs?nim=${nim.value}`)
     krsData.value = res.data.map((item) => ({ ...item, nilai: item.nilai || '' }))
   }
   
   const simpanNilai = async () => {
     for (const item of krsData.value) {
-      await axios.put(`https://sistemakademik1.mockapi.io/krs/${item.id}`, {
+      await axios.put(`https://mockapi.io/projects/686842bdd5933161d70b3886#/krs/${item.id}`, {
         ...item,
         nilai: item.nilai
       })

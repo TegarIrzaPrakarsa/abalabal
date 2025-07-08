@@ -47,7 +47,7 @@
   const ipk = ref(0)
   
   const ambilTranskrip = async () => {
-    const res = await axios.get(`https://sistemakademik1.mockapi.io/krs?nim=${nim.value}`)
+    const res = await axios.get(`https://mockapi.io/projects/686842bdd5933161d70b3886#/krs?nim=${nim.value}`)
     transkrip.value = res.data
     hitungIPK()
   }

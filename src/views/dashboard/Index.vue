@@ -24,10 +24,10 @@
   
   onMounted(async () => {
     const [mhsRes, dosenRes, mkRes, krsRes] = await Promise.all([
-      axios.get('https://sistemakademik1.mockapi.io/mahasiswa'),
-      axios.get('https://sistemakademik1.io/dosen'),
-      axios.get('https://sistemakademik1.io/matakuliah'),
-      axios.get('https://sistemakademik1.mockapi.io/krs')
+      axios.get('https://mockapi.io/projects/686842bdd5933161d70b3886#/mahasiswa'),
+      axios.get('https://mockapi.io/projects/686842bdd5933161d70b3886#/dosen'),
+      axios.get('https://mockapi.io/projects/686842bdd5933161d70b3886#/matakuliah'),
+      axios.get('https://mockapi.io/projects/686842bdd5933161d70b3886#/krs')
     ])
   
     jumlahMahasiswa.value = mhsRes.data.length

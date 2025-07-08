@@ -30,18 +30,18 @@
   const form = ref({ username: '', role: '' })
   
   const ambilUsers = async () => {
-    const res = await axios.get(`https://sistemakademik1.mockapi.io/users`)
+    const res = await axios.get(`https://mockapi.io/projects/686842bdd5933161d70b3886#/users`)
     users.value = res.data
   }
   
   const tambahUser = async () => {
-    await axios.post(`https://sistemakademik1.mockapi.io/users`, form.value)
+    await axios.post(`https://mockapi.io/projects/686842bdd5933161d70b3886#/users`, form.value)
     form.value = { username: '', role: '' }
     ambilUsers()
   }
   
   const hapusUser = async (id) => {
-    await axios.delete(`https://sistemakademik1.mockapi.io/users/${id}`)
+    await axios.delete(`https://mockapi.io/projects/686842bdd5933161d70b3886#/users/${id}`)
     ambilUsers()
   }
   
